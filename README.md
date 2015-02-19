@@ -14,14 +14,14 @@ Handling of ISBN validation and formatting. Can use ranges downloaded from https
 Via Composer
 
 ``` bash
-$ composer require league/isbn
+$ composer require agnarodegard/isbn
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+$isbn = new Isbn();
+echo $isbn->isbn;
 ```
 
 ## Testing
