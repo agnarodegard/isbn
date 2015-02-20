@@ -19,6 +19,8 @@ $ composer require agnarodegard/isbn
 
 ## Usage
 
+Instantiate the class with either a complete ISBN10 or ISBN13, with or without hyphens, with or without checkdigit.
+
 ``` php
 require_once "vendor/autoload.php";
 $isbn = new \Agnarodegard\Isbn\Isbn('978-82-15-01538-5');
