@@ -2,6 +2,9 @@
 
 All Notable changes to `isbn` will be documented in this file
 
+## 100% functional 2015-02-20
+Missing some tests though.
+
 ## 80% complete - 2015-02-19
 
 ### Added

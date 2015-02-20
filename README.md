@@ -20,8 +20,29 @@ $ composer require agnarodegard/isbn
 ## Usage
 
 ``` php
-$isbn = new Isbn();
-echo $isbn->isbn;
+require_once "vendor/autoload.php";
+$isbn = new \Agnarodegard\Isbn\Isbn('978-82-15-01538-5');
+
+// This is the user input.
+echo 'ISBN ' . $isbn->isbn . PHP_EOL;
+
+// User input with all illegal characters removed
+echo 'unformatted ' . $isbn->unformatted . PHP_EOL;
+
+// Returns 'ISBN10', 'ISBN13' or false.
+echo 'type ' . $isbn->type() . PHP_EOL;
+
+// Returns true or false
+echo 'valid ' . ($isbn->valid === true ? 'true' : 'false') . PHP_EOL;
+
+// Returns hyphenated ISBN.
+echo 'hyphenate ' . $isbn->hyphenate() . PHP_EOL;
+
+// Returns ISBN with spaces instead of hyphens.
+echo 'hyphenate ' . $isbn->hyphenate(' ') . PHP_EOL;
+
+// Calculates the checkDigit of an ISBN.
+echo 'checkDigit ' . $isbn->checkDigit() . PHP_EOL;
 ```
 
 ## Testing
