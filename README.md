@@ -24,31 +24,33 @@ require_once "vendor/autoload.php";
 $isbn = new \Agnarodegard\Isbn\Isbn('978-82-15-01538-5');
 
 // This is the user input.
-echo 'ISBN ' . $isbn->isbn . PHP_EOL;
+$isbn->isbn
 
 // User input with all illegal characters removed
-echo 'unformatted ' . $isbn->unformatted . PHP_EOL;
+$isbn->unformatted
 
 // Returns 'ISBN10', 'ISBN13' or false.
-echo 'type ' . $isbn->type() . PHP_EOL;
+$isbn->type()
 
 // Returns true or false
-echo 'valid ' . ($isbn->valid === true ? 'true' : 'false') . PHP_EOL;
+$isbn->valid
 
 // Returns hyphenated ISBN.
-echo 'hyphenate ' . $isbn->hyphenate() . PHP_EOL;
+$isbn->hyphenate()
 
 // Returns ISBN with spaces instead of hyphens.
-echo 'hyphenate ' . $isbn->hyphenate(' ') . PHP_EOL;
+$isbn->hyphenate(' ')
 
 // Calculates the checkDigit of an ISBN.
-echo 'checkDigit ' . $isbn->checkDigit() . PHP_EOL;
+$isbn->checkDigit()
+
+// Conversion between ISBN10 and ISBN13 not implemented yet.
 ```
 
 ## Testing
 
 ``` bash
-$ phpunit
+$ php vendor/phpunit/phpunit/phpunit
 ```
 
 ## Contributing
